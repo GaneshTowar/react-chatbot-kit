@@ -294,32 +294,21 @@ const Chat = ({
   }
 
   return (
-    <div className="react-chatbot-kit-chat-container">
+    <><div className="react-chatbot-kit-chat-container">
       <div className="react-chatbot-kit-chat-inner-container">
         <ConditionallyRender
           condition={!!customComponents.header}
-          show={
-            customComponents.header && customComponents.header(actionProvider)
-          }
-          elseShow={
-            <div className="react-chatbot-kit-chat-header">{header}</div>
-          }
-        />
+          show={customComponents.header && customComponents.header(actionProvider)}
+          elseShow={<div className="react-chatbot-kit-chat-header">{header}</div>} />
 
         <div
           className="react-chatbot-kit-chat-message-container"
           ref={messageContainerRef}
         >
           <ConditionallyRender
-            condition={
-              typeof messageHistory === 'string' && Boolean(messageHistory)
-            }
-            show={
-              <div
-                dangerouslySetInnerHTML={{ __html: messageHistory as string }}
-              />
-            }
-          />
+            condition={typeof messageHistory === 'string' && Boolean(messageHistory)}
+            show={<div
+              dangerouslySetInnerHTML={{ __html: messageHistory as string }} />} />
 
           {renderMessages()}
           <div style={{ paddingBottom: '15px' }} />
@@ -334,8 +323,7 @@ const Chat = ({
               className="react-chatbot-kit-chat-input"
               placeholder={placeholder}
               value={input}
-              onChange={(e) => setInputValue(e.target.value)}
-            />
+              onChange={(e) => setInputValue(e.target.value)} />
             <button
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
@@ -358,12 +346,11 @@ const Chat = ({
             </div>
 
           </form>
-          <p>{transcript}</p>
-            <p>Microphone: {listening ? 'on' : 'off'}</p>
+
 
         </div>
       </div>
-    </div>
+    </div><p>{transcript}</p><p>Microphone: {listening ? 'on' : 'off'}</p></>
   );
 };
 
