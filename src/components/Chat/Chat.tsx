@@ -356,7 +356,7 @@ const Chat = ({
               style={customButtonStyle}
             > Stop
             </div>
-
+            <p>{transcript}</p>
             <p>Microphone: {listening ? 'on' : 'off'}</p>
 
           </form>
