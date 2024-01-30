@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, SetStateAction } from 'react';
 import ConditionallyRender from 'react-conditionally-render';
-
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import UserChatMessage from '../UserChatMessage/UserChatMessage';
 import ChatbotMessage from '../ChatbotMessage/ChatbotMessage';
 
@@ -65,6 +65,18 @@ const Chat = ({
 
   const [input, setInputValue] = useState('');
 
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition
+  } = useSpeechRecognition();
+
+
+  if (!browserSupportsSpeechRecognition) {
+    return <span>Browser doesn't support speech recognition.</span>;
+  }
+
   const scrollIntoView = () => {
     setTimeout(() => {
       if (messageContainerRef.current) {
@@ -73,6 +85,11 @@ const Chat = ({
       }
     }, 50);
   };
+
+  useEffect(()=>{
+    console.log(transcript,"transcript")
+  },[transcript])
+
 
   useEffect(() => {
     if (disableScrollToBottom) return;
@@ -317,11 +334,19 @@ const Chat = ({
             </button>
 
             <div
+              onClick={SpeechRecognition.startListening}
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
-            > Speak
+            > Start
             </div>
-            
+
+            <div
+              onClick={SpeechRecognition.stopListening}
+              className="react-chatbot-kit-chat-btn-send"
+              style={customButtonStyle}
+            > Stop
+            </div>
+
           </form>
         </div>
       </div>

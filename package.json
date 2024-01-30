@@ -6,7 +6,8 @@
   "main": "build/index.js",
   "types": "build/src/index.d.ts",
   "dependencies": {
-    "react-conditionally-render": "^1.0.2"
+    "react-conditionally-render": "^1.0.2",
+    "react-speech-recognition": "^3.10.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.21",
+    "@types/react-speech-recognition": "^3.9.5",
     "css-loader": "^3.5.1",
     "mini-css-extract-plugin": "^1.4.0",
     "react-svg-loader": "^3.0.3",
