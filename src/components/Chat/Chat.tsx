@@ -77,6 +77,15 @@ const Chat = ({
     return <span>Browser doesn't support speech recognition.</span>;
   }
 
+  const handleStartListening = () => {
+    SpeechRecognition.startListening();
+  };
+  
+  const handleStopListening = () => {
+    SpeechRecognition.stopListening();
+  };
+  
+
   const scrollIntoView = () => {
     setTimeout(() => {
       if (messageContainerRef.current) {
@@ -335,14 +344,14 @@ const Chat = ({
             </button>
 
             <div
-              onClick={SpeechRecognition.startListening}
+              onClick={handleStartListening}
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
             > Start
             </div>
 
             <div
-              onClick={SpeechRecognition.stopListening}
+              onClick={handleStopListening}
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
             > Stop
