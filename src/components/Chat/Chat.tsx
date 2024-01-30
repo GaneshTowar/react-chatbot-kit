@@ -357,6 +357,8 @@ const Chat = ({
             > Stop
             </div>
 
+            <p>Microphone: {listening ? 'on' : 'off'}</p>
+
           </form>
         </div>
       </div>
