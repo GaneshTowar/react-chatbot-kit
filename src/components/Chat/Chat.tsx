@@ -315,11 +315,13 @@ const Chat = ({
             >
               <ChatIcon className="react-chatbot-kit-chat-btn-send-icon" />
             </button>
-            <button
+
+            <div
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
-            > Speak1
-            </button>
+            > Speak
+            </div>
+            
           </form>
         </div>
       </div>
