@@ -78,10 +78,12 @@ const Chat = ({
   }
 
   const handleStartListening = () => {
+    console.log("start REC")
     SpeechRecognition.startListening();
   };
   
   const handleStopListening = () => {
+    console.log("stop REC")
     SpeechRecognition.stopListening();
   };
   
