@@ -358,8 +358,6 @@ const Chat = ({
                 )}
             </div>
 
-            <p>Microphone: {listening ? 'on' : 'off'}</p>
-
           </form>
   
 
