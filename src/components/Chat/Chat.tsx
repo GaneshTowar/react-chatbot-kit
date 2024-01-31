@@ -3,6 +3,7 @@ import ConditionallyRender from 'react-conditionally-render';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import UserChatMessage from '../UserChatMessage/UserChatMessage';
 import ChatbotMessage from '../ChatbotMessage/ChatbotMessage';
+import { MdKeyboardVoice } from "react-icons/md";
 
 import {
   botMessage,
@@ -349,16 +350,14 @@ const Chat = ({
               onClick={handleStartListening}
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
-            > Start
+            >   
+                {listening ? (
+                  <MdKeyboardVoice style={{ color: 'green' }} />
+                ) : (
+                  <MdKeyboardVoice style={{ color: 'red' }} />
+                )}
             </div>
 
-            <div
-              onClick={handleStopListening}
-              className="react-chatbot-kit-chat-btn-send"
-              style={customButtonStyle}
-            > Stop
-            </div>
-            <p>{transcript}</p>
             <p>Microphone: {listening ? 'on' : 'off'}</p>
 
           </form>

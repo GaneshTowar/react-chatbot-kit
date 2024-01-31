@@ -1524,6 +1524,11 @@
   "resolved" "https://registry.npmjs.org/react-conditionally-render/-/react-conditionally-render-1.0.2.tgz"
   "version" "1.0.2"
 
+"react-icons@^5.0.1":
+  "integrity" "sha512-WqLZJ4bLzlhmsvme6iFdgO8gfZP17rfjYEJ2m9RsZjZ+cc4k1hTzknEz63YS1MeT50kVzoa1Nz36f4BEx+Wigw=="
+  "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-5.0.1.tgz"
+  "version" "5.0.1"
+
 "react-speech-recognition@^3.10.0":
   "integrity" "sha512-EVSr4Ik8l9urwdPiK2r0+ADrLyDDrjB0qBRdUWO+w2MfwEBrj6NuRmy1GD3x7BU/V6/hab0pl8Lupen0zwlJyw=="
   "resolved" "https://registry.npmjs.org/react-speech-recognition/-/react-speech-recognition-3.10.0.tgz"
@@ -1550,7 +1555,7 @@
     "loader-utils" "^1.2.3"
     "react-svg-core" "^3.0.3"
 
-"react@>=16.8.0":
+"react@*", "react@>=16.8.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
