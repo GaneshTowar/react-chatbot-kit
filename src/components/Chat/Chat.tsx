@@ -99,7 +99,7 @@ const Chat = ({
 
   useEffect(()=>{
     console.log(transcript,"transcript")
-    setInputValue(transcript)
+    setInputValue(input+transcript)
   },[transcript])
 
 
