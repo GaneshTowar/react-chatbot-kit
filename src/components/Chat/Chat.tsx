@@ -100,8 +100,9 @@ const Chat = ({
 
   useEffect(()=>{
     console.log(transcript,"transcript")
-    setInputValue(input+transcript)
-  },[transcript])
+    if(!listening)
+      setInputValue(input+transcript)
+  },[listening,transcript])
 
 
   useEffect(() => {
@@ -352,9 +353,9 @@ const Chat = ({
               style={customButtonStyle}
             >   
                 {listening ? (
-                  <MdKeyboardVoice style={{ color: 'green' }} />
+                  <MdKeyboardVoice style={{ color: 'green', fontSize: 28 }} />
                 ) : (
-                  <MdKeyboardVoice style={{ color: 'red' }} />
+                  <MdKeyboardVoice style={{ color: 'green', fontSize: 28 }} />
                 )}
             </div>
 
