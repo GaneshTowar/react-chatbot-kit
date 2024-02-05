@@ -70,6 +70,7 @@ const Chat = ({
     transcript,
     listening,
     resetTranscript,
+    finalTranscript,
     browserSupportsSpeechRecognition
   } = useSpeechRecognition();
 
@@ -97,13 +98,12 @@ const Chat = ({
   useEffect(()=>{
 
       setInputValue(previousvalue=> {
-        let str = transcript
-        resetTranscript
+        let str = finalTranscript
         return previousvalue+str
 
       })
 
-  },[transcript])
+  },[finalTranscript])
 
 
   useEffect(() => {
