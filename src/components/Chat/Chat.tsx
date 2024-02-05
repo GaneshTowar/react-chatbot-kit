@@ -83,11 +83,7 @@ const Chat = ({
     SpeechRecognition.startListening();
   };
   
-  const handleStopListening = () => {
-    console.log("stop REC")
-    SpeechRecognition.stopListening();
-  };
-  
+
 
   const scrollIntoView = () => {
     setTimeout(() => {
@@ -99,10 +95,8 @@ const Chat = ({
   };
 
   useEffect(()=>{
-    console.log(transcript,"transcript")
-    if(!listening)
       setInputValue(input+transcript)
-  },[listening,transcript])
+  },[listening])
 
 
   useEffect(() => {
