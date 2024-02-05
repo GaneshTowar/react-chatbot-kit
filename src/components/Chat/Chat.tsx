@@ -95,8 +95,8 @@ const Chat = ({
   };
 
   useEffect(()=>{
-      setInputValue(input+transcript)
-  },[listening])
+      setInputValue(previousvalue=> previousvalue+transcript)
+  },[transcript])
 
 
   useEffect(() => {
