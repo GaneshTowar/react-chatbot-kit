@@ -95,7 +95,14 @@ const Chat = ({
   };
 
   useEffect(()=>{
-      setInputValue(previousvalue=> previousvalue+transcript)
+
+      setInputValue(previousvalue=> {
+        let str = transcript
+        resetTranscript
+        return previousvalue+str
+
+      })
+
   },[transcript])
 
 
