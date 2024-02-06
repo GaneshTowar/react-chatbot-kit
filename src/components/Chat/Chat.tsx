@@ -350,9 +350,9 @@ const Chat = ({
               style={customButtonStyle}
             >   
                 {listening ? (
-                  <MdKeyboardVoice style={{ color: 'green', fontSize: 28 }} />
+                  <MdKeyboardVoice style={{ color: 'green', fontSize: 24 }} />
                 ) : (
-                  <MdKeyboardVoice style={{ color: 'red', fontSize: 28 }} />
+                  <MdKeyboardVoice style={{ color: 'red', fontSize: 24 }} />
                 )}
             </div>
 
