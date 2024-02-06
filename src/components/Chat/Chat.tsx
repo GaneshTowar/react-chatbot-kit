@@ -97,13 +97,9 @@ const Chat = ({
 
   useEffect(()=>{
 
-      setInputValue(previousvalue=> {
-        let str = finalTranscript
-        return previousvalue+str
+      setInputValue(input + transcript)
 
-      })
-
-  },[finalTranscript])
+  },[listening])
 
 
   useEffect(() => {
@@ -356,7 +352,7 @@ const Chat = ({
                 {listening ? (
                   <MdKeyboardVoice style={{ color: 'green', fontSize: 28 }} />
                 ) : (
-                  <MdKeyboardVoice style={{ color: 'green', fontSize: 28 }} />
+                  <MdKeyboardVoice style={{ color: 'red', fontSize: 28 }} />
                 )}
             </div>
 
